@@ -1,0 +1,1777 @@
+ALEJANDRO VALBUENA TALLER 02
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "SENA",
+      home: Text('AlejandroValbuena'),
+    );
+  }
+}
+-----------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "SENA | DISTRITO CAPITAL | CEET",
+      home: Column(
+        children: [
+          Text("Aprendiz"),
+          Text("AlejandroValbuena"),
+          Icon(Icons.ice_skating_outlined),
+          Icon(Icons.icecream),
+          ElevatedButton(onPressed: () {}, child: Text("Crear")),
+          ElevatedButton(onPressed: () {}, child: Text("Editar")),
+          ElevatedButton(onPressed: () {}, child: Text("Enviar")),
+        ],
+      ),
+    );
+  }
+}
+-----------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "SENA | CEET",
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.cyan,
+          title: Text("DATOS | PERSONALES "),
+        ),
+        body: Column(
+          children: [
+            Text("Aprendiz"),
+            Text("Alejandro Valbuena"),
+            Icon(Icons.king_bed),
+            Icon(Icons.power_off),
+            ElevatedButton(onPressed: () {}, child: Text("Crear")),
+            ElevatedButton(onPressed: () {}, child: Text("Editar")),
+            ElevatedButton(onPressed: () {}, child: Text("Enviar")),
+          ],
+        ),
+      ),
+    );
+  }
+}
+-----------------------------------------------------------------------------------------------------------
+import 'dart:js_util';
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "SENA | CEET",
+      home: Scaffold(
+        appBar: AppBar(
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.blue[900],
+          title: Text("Información Personal"),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Image(
+                image: NetworkImage("https://urgenciesveterinaries.com/wp-content/uploads/2023/09/survet-gato-caida-pelo-01.jpeg")
+              ),
+              ListTile(
+                title: Text("DIEGO ALEJANDRO"),
+                subtitle: Text("Nombres"),
+                leading: Icon(Icons.perm_identity_outlined),
+              ),
+              Divider(),
+              ListTile(
+                title: Text("VALBUENA MANCERA"),
+                subtitle: Text("Apellidos"),
+                leading: Icon(Icons.bedroom_baby_rounded),
+              ),
+              Divider(),
+              ListTile(
+                title: Text("3016875644"),
+                subtitle: Text("Celular"),
+                leading: Icon(Icons.phone),
+              ),
+              Divider(),
+              ListTile(
+                title: Text("DISTRITO CAPITAL"),
+                subtitle: Text("Regional"),
+                leading: Icon(Icons.location_city),
+              ),
+              Divider(),
+              ListTile(
+                title: Text("CEET"),
+                subtitle: Text("Centro de Formación"),
+                leading: Icon(Icons.location_on),
+              ),
+              Divider(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+-----------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "SENA | CEET",
+      debugShowCheckedModeBanner: false,
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.green,
+        title: Text("FICHA | 2925960"),
+      ),
+      body: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 5,
+        ),
+        itemCount: 50,
+        itemBuilder: (BuildContext context, int index) {
+          return Card(
+            child: Center(child: Text(index.toString())),
+            color: Colors.cyan,
+          );
+        },
+      ),
+    );
+  }
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());  
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "SENA | CEET",
+      debugShowCheckedModeBanner: false,
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.green,
+        title: Text("FICHA | 2925960"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView.builder(          
+          itemCount: aprendices.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              child: ListTile(
+                leading: Icon(Icons.person),
+                title: Text(aprendices[index]),
+              ),
+            );
+          },
+        ),
+      ),      
+    );
+  }
+}
+
+List<String> aprendices = [
+  "AMAYA MARTINEZ", "FABIAN YESID BELTRAN BUSTOS", "JULIAN DANIEL BORDA ARDILA",
+  "RONNY CADENA QUINTERO", "ALAN JAIR CAMACHO FERRUCHO", "CARLOS EDUARDO CASTAÑEDA LEIVA",
+  "BRAYAN DAVID CORDOBA MALDONADO", "NICOL DAYANA CRUZ FIGUEROA", "OSCAR MAURICIO CUIDA ESQUIVEL",
+  "SAMUEL DAZA CAMACHO", "JOSE DAVID ESPITIA ARENAS", "MAICOL STIVEN FERNANDEZ VALLEJO",
+  "SHARON TATIANA HERRERA MATEUS", "BRAYAN STIVEN LONDOÑO CARVAJAL", "JUAN ESTEBAN LOZANO PANESSO",
+  "EDWARD CAMILO MADRIGAL TIQUE", "JOHAN SNEIDER MELO CANO", "CRISTIAN CAMILO MENESES PARRA",
+  "DAVID LEONARDO MIRANDA MORENO", "JOHAN DANIEL MONTEALEGRE SANCHEZ", "KEVIN SANTIAGO MONZON AMORTEGUI",
+  "CRISTIAN DAVID MORALEZ PACHON", "DAVID SANTIAGO PACHECO RUEDA", "KEVIN LEONARDO PINZON HERNANDEZ",
+  "VALENTINA TORRES TORRES", "MIGUEL ANGEL TUNJANO CORREA", "MIGUEL ANGEL VALBUENA MANCERA",
+  "DIEGO ALEJANDRO VASQUEZ PRADA", "JOHN MICHAEL VILLAZON MONTERO", "MARIA ALEJANDRA ZABALETA CALDERON",
+  "JOSE DAVID"
+];
+---------------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "SENA | CEET",
+      home: const HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.green,
+        title: const Text("SENA | CEET"),
+      ),
+      body: ListView.builder(
+        itemCount: aprendices.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            leading: const Icon(Icons.person),
+            title: Text(aprendices[index]['nombre']),
+            subtitle: Text(aprendices[index]['telefono']),
+          );
+        },
+      ),
+    );
+  }
+// }
+
+List<Map<String, dynamic>> aprendices = [
+  {'nombre': 'AMAYA MARTINEZ FABIAN YESID', 'telefono': '573195638261'},
+  {'nombre': 'BELTRAN BUSTOS JULIAN DANIEL', 'telefono': '3226607792'},
+  {'nombre': 'BORDA ARDILA RONNY', 'telefono': '3219759220'},
+  {'nombre': 'CADENA QUINTERO ALAN JAIR', 'telefono': '5714886956'},
+  {'nombre': 'CAMACHO FERRUCHO CARLOS EDUARDO', 'telefono': '3143808047'},
+  {'nombre': 'CASTAÑEDA LEIVA BRAYAN DAVID', 'telefono': '3013237460'},
+  {'nombre': 'CORDOBA MALDONADO NICOL DAYANA', 'telefono': '573053677841'},
+  {'nombre': 'CRUZ FIGUEROA OSCAR MAURICIO', 'telefono': '3227813912'},
+  {'nombre': 'CUIDA ESQUIVEL SAMUEL', 'telefono': '3054302025'},
+  {'nombre': 'DAZA CAMACHO JOSE DAVID', 'telefono': '3143688476'},
+  {'nombre': 'ESPITIA ARENAS MAICOL STIVEN', 'telefono': '3123767034'},
+  {'nombre': 'FERNANDEZ VALLEJO SHARON TATIANA', 'telefono': '3227658431'},
+  {'nombre': 'HERRERA MATEUS BRAYAN STIVEN', 'telefono': '3132860500'},
+  {'nombre': 'LONDOÑO CARVAJAL JUAN ESTEBAN', 'telefono': '3505112026'},
+  {'nombre': 'LOZANO PANESSO EDWARD CAMILO', 'telefono': '3041381520'},
+  {'nombre': 'MADRIGAL TIQUE JOHAN SNEIDER', 'telefono': '3001597024'},
+  {'nombre': 'MELO CANO CRISTIAN CAMILO', 'telefono': '3112850538'},
+  {'nombre': 'MENESES PARRA DAVID LEONARDO', 'telefono': '3138292531'},
+  {'nombre': 'MIRANDA MORENO JOHAN DANIEL', 'telefono': '3202564149'},
+  {'nombre': 'MONTEALEGRE SANCHEZ KEVIN SANTIAGO', 'telefono': '3209188193'},
+  {'nombre': 'MONZON AMORTEGUI CRISTIAN DAVID', 'telefono': '3107883038'},
+  {'nombre': 'MORALEZ PACHON DAVID SANTIAGO', 'telefono': '3116658577'},
+  {'nombre': 'PACHECO RUEDA KEVIN LEONARDO', 'telefono': '3156406251'},
+  {'nombre': 'PINZON HERNANDEZ VALENTINA', 'telefono': '3115918301'},
+  {'nombre': 'TORRES TORRES MIGUEL ANGEL', 'telefono': '3135562730'},
+  {'nombre': 'TUNJANO CORREA MIGUEL ANGEL', 'telefono': '3125918289'},
+  {'nombre': 'VALBUENA MANCERA DIEGO ALEJANDRO', 'telefono': '3016875644'},
+  {'nombre': 'VASQUEZ PRADA JOHN MICHAEL', 'telefono': '3123503334'},
+  {'nombre': 'VILLAZON MONTERO MARIA ALEJANDRA', 'telefono': '3172897823'},
+  {'nombre': 'ZABALETA CALDERON JOSE DAVID', 'telefono': '3235995105'},
+];
+---------------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "FICHA | 2925960", // Cambié "SENA | CEET" por "FICHA | 2925960"
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        title: Text("FICHA | 2925960"), // Cambié el título aquí también
+      ),
+      body: ListView.builder(
+        itemCount: aprendices.length, // Cambié el nombre de la lista
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            trailing: Icon(Icons.arrow_circle_right_outlined),
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(
+                aprendices[index]["foto"],
+              ), // Dejé el espacio para la foto
+            ),
+            title: Text(aprendices[index]["nombre"]),
+            subtitle: Text(
+              "${aprendices[index]["telefono"]} - ${aprendices[index]["ubicacion"]}",
+            ),
+            onTap: () {
+              showModalBottomSheet(
+                isScrollControlled: true,
+                context: context,
+                builder: (context) {
+                  return Scaffold(
+                    appBar: AppBar(
+                      backgroundColor:
+                          aprendices[index]["color_distintivo"], // Color personalizado
+                      title: Text(aprendices[index]["nombre"]),
+                    ),
+                    body: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: ListView(
+                        children: [
+                          CircleAvatar(
+                            radius: 100,
+                            backgroundImage: NetworkImage(
+                              aprendices[index]["foto"],
+                            ), // Foto grande
+                          ),
+                          Text("Teléfono: ${aprendices[index]["telefono"]}"),
+                          Divider(),
+                          Text("Ubicación: ${aprendices[index]["ubicacion"]}"),
+                          Divider(),
+                          Text(
+                            "Fecha de inscripción: ${aprendices[index]["fecha_inscripcion"]}",
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+
+List<Map<String, dynamic>> aprendices = [
+  {
+    "nombre": "AMAYA MARTINEZ FABIAN YESID",
+    "telefono": "573195638261",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.red, // Cambié a un color distintivo
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "BELTRAN BUSTOS JULIAN DANIEL",
+    "telefono": "3226607792",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blue,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "BORDA ARDILA RONNY",
+    "telefono": "3219759220",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.green,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CADENA QUINTERO ALAN JAIR",
+    "telefono": "5714886956",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.orange,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CAMACHO FERRUCHO CARLOS EDUARDO",
+    "telefono": "3143808047",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.teal,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "CASTAÑEDA LEIVA BRAYAN DAVID",
+    "telefono": "3013237460",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.yellow,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CORDOBA MALDONADO NICOL DAYANA",
+    "telefono": "573053677841",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.cyan,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "CRUZ FIGUEROA OSCAR MAURICIO",
+    "telefono": "3227813912",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CUIDA ESQUIVEL SAMUEL",
+    "telefono": "3054302025",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.brown,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "DAZA CAMACHO JOSE DAVID",
+    "telefono": "3143688476",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.indigo,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "ESPITIA ARENAS MAICOL STIVEN",
+    "telefono": "3123767034",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pink,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "FERNANDEZ VALLEJO SHARON TATIANA",
+    "telefono": "3227658431",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.amber,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "HERRERA MATEUS BRAYAN STIVEN",
+    "telefono": "3132860500",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.lime,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "LONDOÑO CARVAJAL JUAN ESTEBAN",
+    "telefono": "3505112026",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.greenAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "LOZANO PANESSO EDWARD CAMILO",
+    "telefono": "3041381520",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purpleAccent,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "MADRIGAL TIQUE JOHAN SNEIDER",
+    "telefono": "3001597024",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.redAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MELO CANO CRISTIAN CAMILO",
+    "telefono": "3112850538",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.orangeAccent,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "MENESES PARRA DAVID LEONARDO",
+    "telefono": "3138292531",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blueAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MIRANDA MORENO JOHAN DANIEL",
+    "telefono": "3202564149",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.cyanAccent,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "MONTEALEGRE SANCHEZ KEVIN SANTIAGO",
+    "telefono": "3209188193",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.tealAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MONZON AMORTEGUI CRISTIAN DAVID",
+    "telefono": "3107883038",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.limeAccent,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "MORALEZ PACHON DAVID SANTIAGO",
+    "telefono": "3116658577",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pinkAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "PACHECO RUEDA KEVIN LEONARDO",
+    "telefono": "3156406251",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.amberAccent,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "PINZON HERNANDEZ VALENTINA",
+    "telefono": "3115918301",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.deepOrange,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "TORRES TORRES MIGUEL ANGEL",
+    "telefono": "3135562730",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.deepPurple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "TUNJANO CORREA MIGUEL ANGEL",
+    "telefono": "3125918289",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blueGrey,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "VALBUENA MANCERA DIEGO ALEJANDRO",
+    "telefono": "3016875644",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "VASQUEZ PRADA JOHN MICHAEL",
+    "telefono": "3123503334",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pink,
+    "foto": "https://via.placeholder.com/150",
+  },
+  {
+    "nombre": "VILLAZON MONTERO MARIA ALEJANDRA",
+    "telefono": "3172897823",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.teal,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "ZABALETA CALDERON JOSE DAVID",
+    "telefono": "3235995105",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.green,
+    "foto": "https://via.placeholder.com/150",
+  },
+];
+---------------------------------------------------------------------------------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const Principal());
+}
+
+final txtNombre = TextEditingController();
+final txtDescripcion = TextEditingController();
+final txtFechaLanz = TextEditingController();
+final txtUbicacion = TextEditingController();
+final txtFotografia = TextEditingController();
+final txtColor = TextEditingController();
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "SENA | CEET",
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("FICHA | 2925960"),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+      ),
+      body: ListView.builder(
+        itemCount: aprendices.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(aprendices[index]["foto"]),
+            ),
+            title: Text(aprendices[index]["nombre"]),
+            subtitle: Text(aprendices[index]["ubicacion"]),
+            trailing: Icon(Icons.arrow_circle_right_sharp),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Scaffold(
+                    appBar: AppBar(
+                      title: Text(aprendices[index]["nombre"]),
+                      backgroundColor: aprendices[index]["color_distintivo"],
+                      foregroundColor: Colors.white,
+                    ),
+                    body: ListView(
+                      padding: const EdgeInsets.all(20),
+                      children: [
+                        Center(
+                          child: CircleAvatar(
+                            radius: 80,
+                            backgroundImage: NetworkImage(
+                              aprendices[index]["foto"],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        ListTile(
+                          leading: const Icon(Icons.phone),
+                          title: Text("Teléfono"),
+                          subtitle: Text(aprendices[index]["telefono"]),
+                        ),
+                        ListTile(
+                          leading: const Icon(Icons.location_on),
+                          title: Text("Ubicación"),
+                          subtitle: Text(aprendices[index]["ubicacion"]),
+                        ),
+                        ListTile(
+                          leading: const Icon(Icons.calendar_today),
+                          title: Text("Fecha de inscripción"),
+                          subtitle: Text(
+                            aprendices[index]["fecha_inscripcion"],
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.purple,
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            context: context,
+            builder: (context) {
+              return Scaffold(
+                appBar: AppBar(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.purple,
+                  title: Text("Añadir Aprendiz"),
+                ),
+                body: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        controller: txtNombre,
+                        decoration: InputDecoration(
+                          labelText: "Nombres",
+                          hintText: "Nombres del aprendiz",
+                          icon: Icon(Icons.file_copy),
+                        ),
+                      ),
+                      TextFormField(
+                        controller: txtDescripcion,
+                        decoration: InputDecoration(
+                          labelText: "Apellidos",
+                          hintText: "Apellido del aprendiz",
+                          icon: Icon(Icons.file_copy),
+                        ),
+                      ),
+                      TextFormField(
+                        controller: txtFechaLanz,
+                        decoration: InputDecoration(
+                          labelText: "Inscripcion",
+                          hintText: "Fecha de inscripcion",
+                          icon: Icon(Icons.file_copy),
+                        ),
+                      ),
+                      TextFormField(
+                        controller: txtFotografia,
+                        decoration: InputDecoration(
+                          labelText: "Ubicación",
+                          hintText: "Ubicación del sitio turístico",
+                          icon: Icon(Icons.file_copy),
+                        ),
+                      ),
+                      TextFormField(
+                        controller: txtColor,
+                        decoration: InputDecoration(
+                          labelText: "Telefono",
+                          hintText: "Telefono del aprendiz",
+                          icon: Icon(Icons.file_copy),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                floatingActionButton: FloatingActionButton(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.green,
+                  onPressed: () {
+                    if (txtNombre.text == "") {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          backgroundColor: Colors.red,
+                          content: Text("ERROR! Los espacios estan vacíos"),
+                        ),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          backgroundColor: Colors.green,
+                          content: Text(
+                            "Se ha guardado satisfactoriamente el aprendiz: ${txtNombre.text}",
+                          ),
+                        ),
+                      );
+                    }
+                  },
+                  child: Icon(Icons.save),
+                ),
+              );
+            },
+          );
+        },
+        child: Icon(Icons.account_circle),
+      ),
+    );
+  }
+}
+
+List<Map<String, dynamic>> aprendices = [
+  {
+    "nombre": "AMAYA MARTINEZ FABIAN YESID",
+    "telefono": "573195638261",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.red, // Cambié a un color distintivo
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "BELTRAN BUSTOS JULIAN DANIEL",
+    "telefono": "3226607792",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blue,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "BORDA ARDILA RONNY",
+    "telefono": "3219759220",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.green,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CADENA QUINTERO ALAN JAIR",
+    "telefono": "5714886956",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.orange,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CAMACHO FERRUCHO CARLOS EDUARDO",
+    "telefono": "3143808047",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.teal,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "CASTAÑEDA LEIVA BRAYAN DAVID",
+    "telefono": "3013237460",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.yellow,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CORDOBA MALDONADO NICOL DAYANA",
+    "telefono": "573053677841",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.cyan,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "CRUZ FIGUEROA OSCAR MAURICIO",
+    "telefono": "3227813912",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "CUIDA ESQUIVEL SAMUEL",
+    "telefono": "3054302025",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.brown,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "DAZA CAMACHO JOSE DAVID",
+    "telefono": "3143688476",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.indigo,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "ESPITIA ARENAS MAICOL STIVEN",
+    "telefono": "3123767034",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pink,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "FERNANDEZ VALLEJO SHARON TATIANA",
+    "telefono": "3227658431",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.amber,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "HERRERA MATEUS BRAYAN STIVEN",
+    "telefono": "3132860500",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.lime,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "LONDOÑO CARVAJAL JUAN ESTEBAN",
+    "telefono": "3505112026",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.greenAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "LOZANO PANESSO EDWARD CAMILO",
+    "telefono": "3041381520",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purpleAccent,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "MADRIGAL TIQUE JOHAN SNEIDER",
+    "telefono": "3001597024",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.redAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MELO CANO CRISTIAN CAMILO",
+    "telefono": "3112850538",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.orangeAccent,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "MENESES PARRA DAVID LEONARDO",
+    "telefono": "3138292531",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blueAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MIRANDA MORENO JOHAN DANIEL",
+    "telefono": "3202564149",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.cyanAccent,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "MONTEALEGRE SANCHEZ KEVIN SANTIAGO",
+    "telefono": "3209188193",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.tealAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "MONZON AMORTEGUI CRISTIAN DAVID",
+    "telefono": "3107883038",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.limeAccent,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "MORALEZ PACHON DAVID SANTIAGO",
+    "telefono": "3116658577",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pinkAccent,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "PACHECO RUEDA KEVIN LEONARDO",
+    "telefono": "3156406251",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.amberAccent,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "PINZON HERNANDEZ VALENTINA",
+    "telefono": "3115918301",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.deepOrange,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "TORRES TORRES MIGUEL ANGEL",
+    "telefono": "3135562730",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.deepPurple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "TUNJANO CORREA MIGUEL ANGEL",
+    "telefono": "3125918289",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.blueGrey,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "VALBUENA MANCERA DIEGO ALEJANDRO",
+    "telefono": "3016875644",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.purple,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "VASQUEZ PRADA JOHN MICHAEL",
+    "telefono": "3123503334",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.pink,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+  {
+    "nombre": "VILLAZON MONTERO MARIA ALEJANDRA",
+    "telefono": "3172897823",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.teal,
+    "foto":
+        "https://estaticos-cdn.prensaiberica.es/clip/3080e2a3-a69a-4db2-a394-667348b5b1a8_alta-libre-aspect-ratio_default_0.jpg",
+  },
+  {
+    "nombre": "ZABALETA CALDERON JOSE DAVID",
+    "telefono": "3235995105",
+    "ubicacion": "Colombia",
+    "fecha_inscripcion": "2023-03-01",
+    "color_distintivo": Colors.green,
+    "foto": "https://media.tenor.com/jNaE0MKsTnQAAAAe/mapache-comiendo.png",
+  },
+];
+
+---------------------------------------------------------------------------------------------------------
+
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const Principal());
+}
+
+final txtNombre = TextEditingController();
+final txtDocumento = TextEditingController();
+final txtTelefono = TextEditingController();
+final txtCorreo = TextEditingController();
+final txtFicha = TextEditingController();
+final txtFoto = TextEditingController();
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "FICHA | 2925960",
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Aprendices"),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+      ),
+      body: ListView.builder(
+        itemCount: aprendices.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(aprendices[index]["foto"]),
+            ),
+            title: Text(aprendices[index]["nombre"]),
+            subtitle: Text("Ficha: ${aprendices[index]["ficha"]}"),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return Scaffold(
+                    appBar: AppBar(title: Text(aprendices[index]["nombre"])),
+                    body: ListView(
+                      padding: EdgeInsets.all(10),
+                      children: [
+                        CircleAvatar(
+                          radius: 100,
+                          backgroundImage: NetworkImage(
+                            aprendices[index]["foto"],
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text("Documento: ${aprendices[index]["documento"]}"),
+                        Text("Teléfono: ${aprendices[index]["telefono"]}"),
+                        Text("Correo: ${aprendices[index]["correo"]}"),
+                        Text("Ficha: ${aprendices[index]["ficha"]}"),
+                      ],
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.purple,
+        child: Icon(Icons.person_add),
+        onPressed: () {
+          showModalBottomSheet(
+            isScrollControlled: true,
+            context: context,
+            builder: (context) {
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text("Nuevo Aprendiz"),
+                  backgroundColor: Colors.purple,
+                  foregroundColor: Colors.white,
+                ),
+                body: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        TextFormField(
+                          controller: txtNombre,
+                          decoration: InputDecoration(
+                            labelText: "Nombre",
+                            hintText: "Nombre completo",
+                            icon: Icon(Icons.person),
+                          ),
+                        ),
+                        TextFormField(
+                          controller: txtDocumento,
+                          decoration: InputDecoration(
+                            labelText: "Documento",
+                            hintText: "Número de documento",
+                            icon: Icon(Icons.badge),
+                          ),
+                        ),
+                        TextFormField(
+                          controller: txtTelefono,
+                          decoration: InputDecoration(
+                            labelText: "Teléfono",
+                            hintText: "Número de contacto",
+                            icon: Icon(Icons.phone),
+                          ),
+                        ),
+                        TextFormField(
+                          controller: txtCorreo,
+                          decoration: InputDecoration(
+                            labelText: "Correo",
+                            hintText: "Correo electrónico",
+                            icon: Icon(Icons.email),
+                          ),
+                        ),
+                        TextFormField(
+                          controller: txtFicha,
+                          decoration: InputDecoration(
+                            labelText: "Ficha",
+                            hintText: "Número de ficha",
+                            icon: Icon(Icons.numbers),
+                          ),
+                        ),
+                        TextFormField(
+                          controller: txtFoto,
+                          decoration: InputDecoration(
+                            labelText: "Fotografía (URL)",
+                            hintText: "URL de imagen del aprendiz",
+                            icon: Icon(Icons.image),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                floatingActionButton: FloatingActionButton(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.green,
+                  child: Icon(Icons.save),
+                  onPressed: () {
+                    if (txtNombre.text == "") {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          backgroundColor: Colors.red,
+                          content: Text("ERROR: El nombre está vacío."),
+                        ),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          backgroundColor: Colors.green,
+                          content: Text("Aprendiz guardado: ${txtNombre.text}"),
+                        ),
+                      );
+                    }
+                  },
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+
+List<Map<String, dynamic>> aprendices = [
+  {
+    'nombre': 'FABIAN YESID AMAYA MARTINEZ',
+    'documento': '1019602950',
+    'telefono': '573195638261',
+    'correo': 'ozkaritogioserver@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?man',
+    'color_distintivo': Colors.red,
+  },
+  {
+    'nombre': 'JULIAN DANIEL BELTRAN BUSTOS',
+    'documento': '1023367874',
+    'telefono': '3226607792',
+    'correo': 'julianbeltran081@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student',
+    'color_distintivo': Colors.green,
+  },
+  {
+    'nombre': 'RONNY BORDA ARDILA',
+    'documento': '1025527499',
+    'telefono': '3219759220',
+    'correo': 'ronnyardila2810@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?boy',
+    'color_distintivo': Colors.orange,
+  },
+  {
+    'nombre': 'ALAN JAIR CADENA QUINTERO',
+    'documento': '1012345719',
+    'telefono': '5714886956',
+    'correo': 'blonabek@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?teenager',
+    'color_distintivo': Colors.blue,
+  },
+  {
+    'nombre': 'CARLOS EDUARDO CAMACHO FERRUCHO',
+    'documento': '1031652859',
+    'telefono': '3143808047',
+    'correo': 'carloseduardocf65@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?young-man',
+    'color_distintivo': Colors.purple,
+  },
+  {
+    'nombre': 'BRAYAN DAVID CASTAÑEDA LEIVA',
+    'documento': '1000991521',
+    'telefono': '3013237460',
+    'correo': 'bradacale@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-man',
+    'color_distintivo': Colors.cyan,
+  },
+  {
+    'nombre': 'NICOL DAYANA CORDOBA MALDONADO',
+    'documento': '1034400540',
+    'telefono': '573053677841',
+    'correo': 'nicolcordobam@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?woman',
+    'color_distintivo': Colors.pink,
+  },
+  {
+    'nombre': 'OSCAR MAURICIO CRUZ FIGUEROA',
+    'documento': '1011095680',
+    'telefono': '3227813912',
+    'correo': 'oscarcruzsena2006@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?adult-male',
+    'color_distintivo': Colors.indigo,
+  },
+  {
+    'nombre': 'SAMUEL CUIDA ESQUIVEL',
+    'documento': '1141115348',
+    'telefono': '3054302025',
+    'correo': 'samuelcuidaesquivel@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?kid',
+    'color_distintivo': Colors.teal,
+  },
+  {
+    'nombre': 'JOSE DAVID DAZA CAMACHO',
+    'documento': '1001201759',
+    'telefono': '3143688476',
+    'correo': 'josecrack13113@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-boy',
+    'color_distintivo': Colors.brown,
+  },
+
+  {
+    'nombre': 'MAICOL STIVEN ESPITIA ARENAS',
+    'documento': '1140914629',
+    'telefono': '3123767034',
+    'correo': 'maikespitia909@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-male',
+    'color_distintivo': Colors.amber,
+  },
+  {
+    'nombre': 'SHARON TATIANA FERNANDEZ VALLEJO',
+    'documento': '1028662255',
+    'telefono': '3227658431',
+    'correo': 'vallejotatiana230@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?girl',
+    'color_distintivo': Colors.deepPurple,
+  },
+  {
+    'nombre': 'BRAYAN STIVEN HERRERA MATEUS',
+    'documento': '1099544210',
+    'telefono': '3132860500',
+    'correo': 'sr.mateusstiven@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?young-student',
+    'color_distintivo': Colors.deepOrange,
+  },
+  {
+    'nombre': 'JUAN ESTEBAN LONDOÑO CARVAJAL',
+    'documento': '1010000632',
+    'telefono': '3505112026',
+    'correo': 'juanestebanlc28@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?teen-boy',
+    'color_distintivo': Colors.lightBlue,
+  },
+  {
+    'nombre': 'EDWARD CAMILO LOZANO PANESSO',
+    'documento': '1028861576',
+    'telefono': '3041381520',
+    'correo': 'edwardlozanop@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-face',
+    'color_distintivo': Colors.lightGreen,
+  },
+  {
+    'nombre': 'JOHAN SNEIDER MADRIGAL TIQUE',
+    'documento': '1021671556',
+    'telefono': '3001597024',
+    'correo': 'sneidermad0@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?man-face',
+    'color_distintivo': Colors.yellow,
+  },
+  {
+    'nombre': 'CRISTIAN CAMILO MELO CANO',
+    'documento': '1033700812',
+    'telefono': '3112850538',
+    'correo': 'cm313381@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?male-student',
+    'color_distintivo': Colors.grey,
+  },
+  {
+    'nombre': 'DAVID LEONARDO MENESES PARRA',
+    'documento': '1033705516',
+    'telefono': '3138292531',
+    'correo': 'davidmepa04@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-portrait',
+    'color_distintivo': Colors.blueGrey,
+  },
+  {
+    'nombre': 'JOHAN DANIEL MIRANDA MORENO',
+    'documento': '1025533647',
+    'telefono': '3202564149',
+    'correo': 'johandanielmirandamoreno@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?classroom',
+    'color_distintivo': Colors.lime,
+  },
+  {
+    'nombre': 'KEVIN SANTIAGO MONTEALEGRE SANCHEZ',
+    'documento': '1025531662',
+    'telefono': '3209188193',
+    'correo': 'ksmz2006@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?college-boy',
+    'color_distintivo': Colors.indigoAccent,
+  },
+  {
+    'nombre': 'CRISTIAN DAVID MONZON AMORTEGUI',
+    'documento': '1030522431',
+    'telefono': '3107883038',
+    'correo': 'cristianmonzonunad@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?male-face',
+    'color_distintivo': Colors.tealAccent,
+  },
+  {
+    'nombre': 'DAVID SANTIAGO MORALEZ PACHON',
+    'documento': '1034661422',
+    'telefono': '3116658577',
+    'correo': 'davidsantiagomoralespachon@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?boy-smile',
+    'color_distintivo': Colors.pinkAccent,
+  },
+  {
+    'nombre': 'KEVIN LEONARDO PACHECO RUEDA',
+    'documento': '1109382743',
+    'telefono': '3156406251',
+    'correo': 'ja6974453@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?happy-student',
+    'color_distintivo': Colors.redAccent,
+  },
+  {
+    'nombre': 'VALENTINA PINZON HERNANDEZ',
+    'documento': '1000474803',
+    'telefono': '3115918301',
+    'correo': 'valentinapinzonher07@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?girl-face',
+    'color_distintivo': Colors.greenAccent,
+  },
+  {
+    'nombre': 'MIGUEL ANGEL TORRES TORRES',
+    'documento': '1122528966',
+    'telefono': '3135562730',
+    'correo': 'miguelangeltorrestorres1@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?boy-portrait',
+    'color_distintivo': Colors.cyanAccent,
+  },
+  {
+    'nombre': 'MIGUEL ANGEL TUNJANO CORREA',
+    'documento': '1013113820',
+    'telefono': '3125918289',
+    'correo': 'matcar1229@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?boy-smiling',
+    'color_distintivo': Colors.orangeAccent,
+  },
+  {
+    'nombre': 'DIEGO ALEJANDRO VALBUENA MANCERA',
+    'documento': '1031808220',
+    'telefono': '3016875644',
+    'correo': 'diegoalejandrovalbuenamancera@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?young-person',
+    'color_distintivo': Colors.purpleAccent,
+  },
+  {
+    'nombre': 'JOHN MICHAEL VASQUEZ PRADA',
+    'documento': '1141315948',
+    'telefono': '3123503334',
+    'correo': 'michaelvaskes2017@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?student-boy-smile',
+    'color_distintivo': Colors.lightGreenAccent,
+  },
+  {
+    'nombre': 'MARIA ALEJANDRA VILLAZON MONTERO',
+    'documento': '1066281723',
+    'telefono': '3172897823',
+    'correo': 'Mariavillazonmontero@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?female-student',
+    'color_distintivo': Colors.blueAccent,
+  },
+  {
+    'nombre': 'JOSE DAVID ZABALETA CALDERON',
+    'documento': '1063786375',
+    'telefono': '3235995105',
+    'correo': 'jopsezabaleta5@gmail.com',
+    'ficha': 'FICHA_1',
+    'foto': 'https://source.unsplash.com/featured/?boy-class',
+    'color_distintivo': Colors.yellowAccent,
+  },
+];
+
+-----------------------------------------------------------------------------------------------------
+
+import 'package:flutter_aplication_11/api/ConsultarAlbum.dart';
+import 'package:flutter_aplication_11/api/ConsultarFotos.dart';
+import 'package:flutter_aplication_11/api/ConsultarNoticias.dart';
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const Principal());
+}
+
+class Principal extends StatelessWidget {
+  const Principal({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "SENA | CEET",
+      home: HomePrincipal(),
+    );
+  }
+}
+
+class HomePrincipal extends StatefulWidget {
+  const HomePrincipal({super.key});
+
+  @override
+  State<HomePrincipal> createState() => _HomePrincipalState();
+}
+
+class _HomePrincipalState extends State<HomePrincipal> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Ejemplo app01 - APIS"),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.newspaper),
+                title: Text("Noticias"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarNoticias().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Noticias"),
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.green,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  title: Text(resp[index].title),
+                                  subtitle: Text(resp[index].body),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.comment),
+                title: Text("Comentarios"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {},
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.album),
+                title: Text("Albums"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarAlbum().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Album"),
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.green,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(title: Text(resp[index].title)),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: Icon(Icons.photo),
+                title: Text("Fotos"),
+                trailing: Icon(Icons.arrow_circle_right_outlined),
+                onTap: () {
+                  ConsultarFotos().then((resp) {
+                    showModalBottomSheet(
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (context) {
+                        return Scaffold(
+                          appBar: AppBar(
+                            title: Text("Fotos"),
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.green,
+                          ),
+                          body: ListView.builder(
+                            itemCount: resp.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Card(
+                                child: ListTile(
+                                  leading: CircleAvatar(
+                                    backgroundImage: NetworkImage(
+                                      resp[index].thumbnailUrl,
+                                    ),
+                                  ),
+                                  title: Text(resp[index].title),
+                                ),
+                              );
+                            },
+                          ),
+                        );
+                      },
+                    );
+                  });
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
